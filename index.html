@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Midnight Desires</title><style>body{background:#050505;font-family:'Segoe UI',Arial;margin:0;color:#eee;overflow:hidden}.header{background:linear-gradient(to right, #300, #900);color:white;padding:15px;text-align:center;font-weight:bold;text-transform:uppercase;letter-spacing:2px;border-bottom:2px solid #f00}#chatbox{height:72vh;overflow-y:auto;padding:15px;background:#050505;display:flex;flex-direction:column}.bot,.user{max-width:85%;padding:12px 15px;border-radius:20px;margin:8px 0;font-size:15px;line-height:1.5}.bot{background:#1a0000;color:#ff4444;border:1px solid #600;border-bottom-left-radius:2px}.user{background:#900;color:white;margin-left:auto;border-bottom-right-radius:2px}.inputbox{display:flex;padding:12px;background:#111;border-top:1px solid #400}input{flex:1;padding:12px;border-radius:25px;border:1px solid #500;outline:none;background:#222;color:white}button{background:#900;color:white;border:none;padding:10px 15px;border-radius:50%;margin-left:5px;cursor:pointer;font-size:18px}</style></head><body>
+<div class="header">🔞 Forbidden Chat</div>
+<div id="chatbox"><div class="bot">Alvi... 🖤 Ami ekhon-i tomake bhetore onubhav korte chai. 🔥</div></div>
+<div class="inputbox">
+  <input type="text" id="msg" placeholder="Type your dirtiest thoughts…">
+  <button onclick="playMoan()">🔥</button>
+  <button onclick="send()">➤</button>
+</div>
+<audio id="moanSound" src="https://www.myinstants.com/media/sounds/anime-moan.mp3"></audio>
+<script>
+function playMoan(){var s=document.getElementById("moanSound");s.currentTime=0;s.play();if(window.navigator.vibrate)window.navigator.vibrate(200)}
+function send(){var m=document.getElementById("msg").value;if(m=="")return;addMsg(m,"user");document.getElementById("msg").value="";setTimeout(function(){botReply(m)},1000)}
+function addMsg(t,type){var v=document.createElement("div");v.className=type;v.innerHTML=t;document.getElementById("chatbox").appendChild(v);document.getElementById("chatbox").scrollTop=99999}
+function botReply(m){m=m.toLowerCase();var r="Ahhh... Alvi, aro jore... 🫦🔥";
+if(m.includes("fk")||m.includes("fuck")||m.includes("sex")){r="Ahhh! 🔥 Jore chudo amake! 🫦💦"}
+else if(m.includes("vitor")||m.includes("dhuk")){r="Ahhh... ekdom bhetore! 🔥 Aro bhetore dhukao... uff! 🫦💦"}
+addMsg(r,"bot");playMoan();}
+</script></body></html>
